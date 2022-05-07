@@ -1,0 +1,14 @@
+C:\src\VehiclesApp\VehiclesApp.Service\bin\Debug\net6.0\VehiclesApp.Service.deps.json
+C:\src\VehiclesApp\VehiclesApp.Service\bin\Debug\net6.0\VehiclesApp.Service.runtimeconfig.json
+C:\src\VehiclesApp\VehiclesApp.Service\bin\Debug\net6.0\VehiclesApp.Service.dll
+C:\src\VehiclesApp\VehiclesApp.Service\bin\Debug\net6.0\VehiclesApp.Service.pdb
+C:\src\VehiclesApp\VehiclesApp.Service\obj\Debug\net6.0\VehiclesApp.Service.csproj.AssemblyReference.cache
+C:\src\VehiclesApp\VehiclesApp.Service\obj\Debug\net6.0\VehiclesApp.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\src\VehiclesApp\VehiclesApp.Service\obj\Debug\net6.0\VehiclesApp.Service.AssemblyInfoInputs.cache
+C:\src\VehiclesApp\VehiclesApp.Service\obj\Debug\net6.0\VehiclesApp.Service.AssemblyInfo.cs
+C:\src\VehiclesApp\VehiclesApp.Service\obj\Debug\net6.0\VehiclesApp.Service.csproj.CoreCompileInputs.cache
+C:\src\VehiclesApp\VehiclesApp.Service\obj\Debug\net6.0\VehiclesApp.Service.dll
+C:\src\VehiclesApp\VehiclesApp.Service\obj\Debug\net6.0\refint\VehiclesApp.Service.dll
+C:\src\VehiclesApp\VehiclesApp.Service\obj\Debug\net6.0\VehiclesApp.Service.pdb
+C:\src\VehiclesApp\VehiclesApp.Service\obj\Debug\net6.0\VehiclesApp.Service.genruntimeconfig.cache
+C:\src\VehiclesApp\VehiclesApp.Service\obj\Debug\net6.0\ref\VehiclesApp.Service.dll
