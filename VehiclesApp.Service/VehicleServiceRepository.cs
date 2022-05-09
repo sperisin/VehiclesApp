@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using VehiclesApp.Service.Models;
+using PagedList;
 
 namespace VehiclesApp.Service
 {
@@ -27,7 +28,7 @@ namespace VehiclesApp.Service
 
         public async Task<VehicleMake> DeleteMake(int Id)
         {
-            VehicleMake make = appDbContext.VehicleMakes.Find(Id);
+            VehicleMake? make = appDbContext.VehicleMakes.Find(Id);
             if (make != null)
             {
                 appDbContext.VehicleMakes.Remove(make);
@@ -38,7 +39,7 @@ namespace VehiclesApp.Service
 
         public async Task<VehicleModel> DeleteModel(int Id)
         {
-            VehicleModel model = appDbContext.VehicleModels.Find(Id);
+            VehicleModel? model = appDbContext.VehicleModels.Find(Id);
             if (model != null)
             {
                 appDbContext.VehicleModels.Remove(model);
@@ -47,7 +48,7 @@ namespace VehiclesApp.Service
             return model;
         }
 
-        public IEnumerable<VehicleMake> GetAllMakes(string sortOrder = "", string filter = "")
+        public async Task<IEnumerable<VehicleMake>> GetAllMakes(string sortOrder = "", string filter = "")
         {
             if ((filter == "") || filter == null)
             {
@@ -66,37 +67,40 @@ namespace VehiclesApp.Service
                 return appDbContext.VehicleMakes.Where(x => x.Name.Contains(filter)).OrderBy(x => x.Name);
             }
         }
-
-        public IEnumerable<VehicleModel> GetModels(string sortOrder = "name_asc", string filter = "", VehicleMake? vehicleMake = null)
+        public async Task<IEnumerable<VehicleModel>> GetModels(string sortOrder = "", string filter = "", VehicleMake? vehicleMake = null, int page = 1, int pageSize = 20)
         {
+            if (page == 0)
+                page = 1;
+            if (pageSize == 0)
+                pageSize = 20;
             if (sortOrder == "name_desc" && filter == "" && vehicleMake == null)
-                return appDbContext.VehicleModels.OrderByDescending(x => x.Name);
+                return appDbContext.VehicleModels.OrderByDescending(x => x.Name).ToPagedList(page, pageSize);
             else if (sortOrder == "name_desc" && filter != "" && vehicleMake == null)
-                return appDbContext.VehicleModels.Where(x => x.Name.Contains(filter)).OrderByDescending(y => y.Name);
+                return appDbContext.VehicleModels.Where(x => x.Name.Contains(filter)).OrderByDescending(x => x.Name).ToPagedList(page, pageSize);
             else if (sortOrder == "name_desc" && filter != "" && vehicleMake != null)
-                return appDbContext.VehicleModels.Where(x => x.Name.Contains(filter)).Where(y => y.vehicleMake == vehicleMake).OrderByDescending(z => z.Name);
+                return appDbContext.VehicleModels.Where(x => x.Name.Contains(filter)).Where(x => x.vehicleMake == vehicleMake).OrderByDescending(x => x.Name).ToPagedList(page, pageSize);
             else if (sortOrder == "name_desc" && filter == "" && vehicleMake != null)
-                return appDbContext.VehicleModels.Where(x => x.vehicleMake == vehicleMake).OrderByDescending(y => y.Name);
-
+                return appDbContext.VehicleModels.Where(x => x.vehicleMake == vehicleMake).OrderByDescending(x => x.Name).ToPagedList(page, pageSize);
+             
             if (sortOrder == "name_asc" && filter != "" && vehicleMake == null)
-                return appDbContext.VehicleModels.Where(x => x.Name.Contains(filter)).OrderBy(y => y.Name);
+                return appDbContext.VehicleModels.Where(x => x.Name.Contains(filter)).OrderBy(x => x.Name).ToPagedList(page, pageSize);
             else if (sortOrder == "name_asc" && filter != "" && vehicleMake != null)
-                return appDbContext.VehicleModels.Where(x => x.Name.Contains(filter)).Where(y => y.vehicleMake == vehicleMake).OrderBy(z => z.Name);
+                return appDbContext.VehicleModels.Where(x => x.Name.Contains(filter)).Where(x => x.vehicleMake == vehicleMake).OrderBy(x => x.Name).ToPagedList(page, pageSize);
             else if (sortOrder == "name_asc" && filter == "" && vehicleMake != null)
-                return appDbContext.VehicleModels.Where(x => x.vehicleMake == vehicleMake).OrderBy(y => y.Name);
+                return appDbContext.VehicleModels.Where(x => x.vehicleMake == vehicleMake).OrderBy(x => x.Name).ToPagedList(page, pageSize);
             
-            return appDbContext.VehicleModels.OrderBy(x => x.Name);
+            return sortOrder == "" ? appDbContext.VehicleModels.ToPagedList(page, pageSize) : appDbContext.VehicleModels.Where(x => x.Name.Contains(filter)).ToPagedList(page, pageSize);
         }
 
         public async Task<VehicleMake> GetMake(int Id)
         {
-            VehicleMake make = await appDbContext.VehicleMakes.FindAsync(Id);
+            VehicleMake? make = await appDbContext.VehicleMakes.FindAsync(Id);
             return make;
         }
 
         public async Task<VehicleModel> GetModel(int Id)
         {
-            VehicleModel model = await appDbContext.VehicleModels.FindAsync(Id);
+            VehicleModel? model = await appDbContext.VehicleModels.FindAsync(Id);
             return model;
         }
 

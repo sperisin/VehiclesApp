@@ -20,6 +20,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Ninject" Version="3.3.5" />
+    <PackageReference Include="PagedList" Version="1.17.0" />
   </ItemGroup>
 
 </Project>

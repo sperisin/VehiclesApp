@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qAM7ZuC/fe6x+cHdNJi8S2ytb1d3lODOVUo3Ld2vYBVJX2Oa0UmtobdaqLkiIEOIP5k+EvZeRYYRYVJHAwcwQg==",
+  "dgSpecHash": "96eXcitHI61sJ0a0pIX4S5BGsiuq+153Fdu/5gV2kN5RYpdRb63D43mpmtpk3gi+h6lnOc9yXOfSbV9+UFY6Ng==",
   "success": true,
   "projectFilePath": "C:\\src\\VehiclesApp\\VehiclesApp.Service\\VehiclesApp.Service.csproj",
   "expectedPackageFiles": [
@@ -36,6 +36,7 @@
     "C:\\Users\\Stjepan\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Stjepan\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\Stjepan\\.nuget\\packages\\ninject\\3.3.5\\ninject.3.3.5.nupkg.sha512",
+    "C:\\Users\\Stjepan\\.nuget\\packages\\pagedlist\\1.17.0\\pagedlist.1.17.0.nupkg.sha512",
     "C:\\Users\\Stjepan\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\Stjepan\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",
     "C:\\Users\\Stjepan\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
@@ -59,5 +60,16 @@
     "C:\\Users\\Stjepan\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Users\\Stjepan\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'PagedList 1.17.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "PagedList",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

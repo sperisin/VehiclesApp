@@ -71,6 +71,10 @@
             "Ninject": {
               "target": "Package",
               "version": "[3.3.5, )"
+            },
+            "PagedList": {
+              "target": "Package",
+              "version": "[1.17.0, )"
             }
           },
           "imports": [
