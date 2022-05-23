@@ -13,8 +13,10 @@ namespace VehiclesApp.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public ActionResult Index()
         {
+            ViewBag.Title = "Home Page";
+
             return View();
         }
 

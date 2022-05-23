@@ -1,0 +1,30 @@
+﻿@model VehiclesApp.MVC.Models.VehicleMakeVM
+@{
+    ViewData["Title"] = "Create Vehicle Make";
+}
+
+<h1> @ViewData["Title"]</h1>
+@using (Html.BeginForm("Create", "VehicleMake", FormMethod.Post,  new { id = "createVehicleMakeForm" }))
+{
+    <div class="row">
+        <div class="col-lg-2"> 
+            Name:
+        </div>
+        <div class="col-lg-10">
+            @Html.TextBoxFor(a => a.vehicleMake.Name, new { @class = "form-control" })
+        </div>
+     </div>
+     <br />
+     <div class="row">
+        <div class="col-lg-2"> 
+            Abreviation:
+        </div>
+        <div class="col-lg-10">
+            @Html.TextBoxFor(a => a.vehicleMake.Abrv, new { @class = "form-control" })
+        </div>
+     </div>
+     <br />
+     <div class="row">
+        <div class="col-lg-12"><input type="submit" value="Submit" class="btn btn-primary"> </div>
+     </div>
+}

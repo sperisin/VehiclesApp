@@ -1,17 +1,13 @@
 ﻿using Ninject.Modules;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using VehiclesApp.Service.Repository;
 
-namespace VehiclesApp.Service.Models
+namespace VehiclesApp.Service.Models;
+
+class DIModule : NinjectModule
 {
-    class DIModule : NinjectModule
+    public override void Load()
     {
-        public override void Load()
-        {
-            Bind<IVehicleServiceRepository>().To<VehicleServiceRepository>();
-        }
+        Bind<IVehicleMakeRepository>().To<VehicleMakeRepository>();
+        Bind<IVehicleModelRepository>().To<VehicleModelRepository>();
     }
 }
