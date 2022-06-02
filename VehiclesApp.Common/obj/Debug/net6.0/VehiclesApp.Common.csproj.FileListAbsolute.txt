@@ -1,0 +1,12 @@
+C:\src\VehiclesApp\VehiclesApp.Common\bin\Debug\net6.0\VehiclesApp.Common.deps.json
+C:\src\VehiclesApp\VehiclesApp.Common\bin\Debug\net6.0\VehiclesApp.Common.dll
+C:\src\VehiclesApp\VehiclesApp.Common\bin\Debug\net6.0\VehiclesApp.Common.pdb
+C:\src\VehiclesApp\VehiclesApp.Common\obj\Debug\net6.0\VehiclesApp.Common.csproj.AssemblyReference.cache
+C:\src\VehiclesApp\VehiclesApp.Common\obj\Debug\net6.0\VehiclesApp.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\src\VehiclesApp\VehiclesApp.Common\obj\Debug\net6.0\VehiclesApp.Common.AssemblyInfoInputs.cache
+C:\src\VehiclesApp\VehiclesApp.Common\obj\Debug\net6.0\VehiclesApp.Common.AssemblyInfo.cs
+C:\src\VehiclesApp\VehiclesApp.Common\obj\Debug\net6.0\VehiclesApp.Common.csproj.CoreCompileInputs.cache
+C:\src\VehiclesApp\VehiclesApp.Common\obj\Debug\net6.0\VehiclesApp.Common.dll
+C:\src\VehiclesApp\VehiclesApp.Common\obj\Debug\net6.0\refint\VehiclesApp.Common.dll
+C:\src\VehiclesApp\VehiclesApp.Common\obj\Debug\net6.0\VehiclesApp.Common.pdb
+C:\src\VehiclesApp\VehiclesApp.Common\obj\Debug\net6.0\ref\VehiclesApp.Common.dll

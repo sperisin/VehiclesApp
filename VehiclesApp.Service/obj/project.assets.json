@@ -772,6 +772,19 @@
             "rid": "win"
           }
         }
+      },
+      "VehiclesApp.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Ninject": "3.3.5"
+        },
+        "compile": {
+          "bin/placeholder/VehiclesApp.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VehiclesApp.Common.dll": {}
+        }
       }
     }
   },
@@ -2587,6 +2600,11 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "VehiclesApp.Common/1.0.0": {
+      "type": "project",
+      "path": "../VehiclesApp.Common/VehiclesApp.Common.csproj",
+      "msbuildProject": "../VehiclesApp.Common/VehiclesApp.Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2598,7 +2616,8 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.4",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.4",
       "Ninject >= 3.3.5",
-      "PagedList >= 1.17.0"
+      "PagedList >= 1.17.0",
+      "VehiclesApp.Common >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2627,7 +2646,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\src\\VehiclesApp\\VehiclesApp.Common\\VehiclesApp.Common.csproj": {
+              "projectPath": "C:\\src\\VehiclesApp\\VehiclesApp.Common\\VehiclesApp.Common.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -2692,7 +2715,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   },

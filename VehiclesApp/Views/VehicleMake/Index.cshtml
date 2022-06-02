@@ -1,0 +1,53 @@
+﻿@using VehiclesApp.MVC.Models
+@using X.PagedList.Mvc.Core
+@model VehicleMakeVM
+@{
+    ViewData["Title"] = "Vehicle Makes";
+}
+
+<h1 style="text-align: center;">@ViewData["Title"]</h1>
+<div class="col text-center">
+    <a class="btn btn-primary create" href="/VehicleMake/Create" role="button"> Create new vehicle make </a>
+</div>
+<br />
+<div class="dropdown">
+  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+    Sort by:
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <li><a id="sort_make_name_asc" class="dropdown-item" href="">Name: Ascending</a></li>
+    <li><a id="sort_make_name_desc" class="dropdown-item" href="">Name: Descending</a></li>
+    <li><a id="sort_make_abrv_asc" class="dropdown-item" href="">Abreviation: Ascending</a></li>
+    <li><a id="sort_make_abrv_desc" class="dropdown-item" href="">Abreviation: Descending</a></li>
+  </ul>
+</div>
+<form asp-controller="VehicleMake" asp-action="Index">
+    <p>
+        Search: <input type="text" name="search" />
+        <input type="submit" value="Search" />
+    </p>
+</form>
+<div class="table-responsive-sm" id="vehicleMakesTable" style="width: 100%; overflow: auto; max-height: 800px;">
+    <table class="table">
+        <thead>
+            <tr>
+                <th style="text-align: center;">Name</th>
+                <th style="text-align: center;">Abreviation</th>
+                <th style="text-align: center;">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var make in Model.vehicleMakes) {
+             <tr>
+                 <td style="text-align: center;"> @make.Name </td>
+                 <td style="text-align: center;"> @make.Abrv </td>
+                 <td style="text-align: center;"> <a class="btn btn-primary editMake" id="editVehicleMake_@make.Id" href="/VehicleMake/Edit/@make.Id" role="button"> Edit </a> | <a class="btn btn-primary delMake" id="deleteVehicleMake_@make.Id" href="" role="button"> Delete </a> </td>
+             </tr>
+            }
+        </tbody>
+    </table>
+</div>
+@Html.PagedListPager(Model.vehicleMakes, page => Url.Action("Index", "VehicleMake", new RouteValueDictionary()
+            { {"page", page }, { "sortOrder", Model.sortDirection }, 
+            { "searchString",  Model.search } }))
+

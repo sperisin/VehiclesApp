@@ -1,11 +1,16 @@
 using Microsoft.EntityFrameworkCore;
 using VehiclesApp.Service.Models;
+using VehiclesApp.Service.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=VehiclesDB;Integrated Security=True;"));
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+builder.Services.AddScoped<IVehicleMakeRepository, VehicleMakeRepository>();
+builder.Services.AddScoped<IVehicleModelRepository, VehicleModelRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
