@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehiclesApp.MVC", "VehiclesApp\VehiclesApp.MVC.csproj", "{787E45FB-24B8-4476-BFE3-C71C8F5B428F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehiclesApp.MVC", "VehiclesApp\VehiclesApp.MVC.csproj", "{787E45FB-24B8-4476-BFE3-C71C8F5B428F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehiclesApp.Service", "VehiclesApp.Service\VehiclesApp.Service.csproj", "{C803A283-5536-4A7E-A4BF-607E11A7D7C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehiclesApp.Service", "VehiclesApp.Service\VehiclesApp.Service.csproj", "{C803A283-5536-4A7E-A4BF-607E11A7D7C0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehiclesApp.Common", "VehiclesApp.Common\VehiclesApp.Common.csproj", "{727F7995-C2C5-4EC2-B52E-9ADED76016FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{C803A283-5536-4A7E-A4BF-607E11A7D7C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C803A283-5536-4A7E-A4BF-607E11A7D7C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C803A283-5536-4A7E-A4BF-607E11A7D7C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{727F7995-C2C5-4EC2-B52E-9ADED76016FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{727F7995-C2C5-4EC2-B52E-9ADED76016FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{727F7995-C2C5-4EC2-B52E-9ADED76016FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{727F7995-C2C5-4EC2-B52E-9ADED76016FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
